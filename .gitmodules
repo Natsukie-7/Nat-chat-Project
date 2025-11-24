@@ -1,6 +1,8 @@
 [submodule "WebApp"]
 	path = WebApp
 	url = git@github.com:Natsukie-7/Nath-chat-webapp.git
+	branch = main
 [submodule "ApiRest"]
 	path = ApiRest
 	url = git@github.com:Natsukie-7/Nath-chat-ApiRest.git
+	branch = main

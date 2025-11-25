@@ -16,7 +16,13 @@ jobs:
 
       - name: Update submodules to latest commit
         run: |
-          git submodule update --remote --merge
+          git submodule update --init --recursive
+          git submodule foreach --recursive '
+            branch=$(git symbolic-ref --short HEAD || echo main);
+            git fetch origin $branch;
+            git reset --hard origin/$branch
+          '
+
 
       - name: Commit changes
         run: |
